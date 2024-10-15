@@ -50,6 +50,6 @@ def analyse_page_dict(base_path, android_config):
     with open(page_json_path, 'w', encoding='utf-8') as json_file:
         json_file.write(json.dumps(nested_page_dict, cls=CustomEncoder, indent=4))
         print(f"{page_json_path}文件已生成")
-    # TODO 移动资源的多模块处理
+    # TODO 移动资源的多模块处理，逐个模块处理res文件夹，把每个资源文件都放到
     move_dir(android_config.PROJ_STRUCTURE['app']["RES_ROOT"], output_res_dir)
     return output_dir
