@@ -13,7 +13,7 @@
 {{ component_document }}
 {% endif %}
 {% include "harmony/components.prompt" %}
-{% include "harmony/description/ui_description.prompt " %}
+{% include "harmony/description/ui_description.prompt" %}
 
 {# 转译示例文档 #}
 {% include "harmony/translations/components.prompt" %}
