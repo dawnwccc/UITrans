@@ -5,11 +5,23 @@ llms:
     base_url: http://localhost:3000/v1
     api_key: sk-IIbJeDBOzGgWGGyZ0b64Ae6b61C84675B484825cE99c3c41
     timeout: 3000  # 超时时间 5 分钟
+#  - provider: deepseek
+#    model: deepseek-chat  # 对应deepseek-V3
+#    model: deepseek-reasoner  # 对应deepseek-R1
+#    base_url: https://api.deepseek.com/v1
+#    api_key: sk-ffc130d906ac4de391b4720b8be8c034
+#    timeout: 3000  # 超时时间 5 分钟
   - provider: deepseek
-    model: deepseek-chat
-    base_url: http://localhost:3000/v1
-    api_key: sk-IIbJeDBOzGgWGGyZ0b64Ae6b61C84675B484825cE99c3c41
+    model: ep-20250220154917-m5tv5
+    base_url: https://ark.cn-beijing.volces.com/api/v3
+    api_key: 8ad559ce-6892-4220-a180-60bfd21ed5ad
     timeout: 3000  # 超时时间 5 分钟
+
+#  - provider: deepseek
+#    model: claude-3-5-sonnet-20241022
+#    base_url: https://api.chatanywhere.tech/v1
+#    api_key: sk-c8kxCM9baeyW6LwOP3uO8NZ9YYpGl41G7rdQ9HJhzDJ4oKFS
+#    timeout: 3000  # 超时时间 5 分钟
 
 # prompt模板
 prompt:
@@ -31,7 +43,7 @@ rag:
     code:
       model: models/embedding/jina-embeddings-v2-base-code
     text:
-      model: models/embedding/bge-m3
+      model: models/embedding/bge-reranker-v2-m3
     rerank:
       model: models/embedding/bge-reranker-v2-m3
 

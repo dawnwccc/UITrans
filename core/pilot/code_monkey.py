@@ -891,7 +891,7 @@ class CodeMonkeyAgent(LLMAgent):
             # 生成所有组件的转译任务
             translate_component_tasks = {}
             for index, (task, translation) in enumerate(zip(breakdown_android_layout.tasks, translations)):
-                translation = []
+                # translation = []
                 if len(translation) == 0:
                     future = executor.submit(
                         self._generate_component_v1,
